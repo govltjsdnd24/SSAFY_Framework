@@ -14,23 +14,23 @@
 		<maven.compiler.source>${java-version}</maven.compiler.source>
 		<maven.compiler.target>${java-version}</maven.compiler.target>
 		
-		<org.springframework-version>5.3.27</org.springframework-version>
-		<org.aspectj-version>1.9.19</org.aspectj-version>
+		<org.springframework-version>5.3.26</org.springframework-version>
+		<org.aspectj-version>1.9.9.1</org.aspectj-version>
 		<log4j-version>1.2.17</log4j-version>
-		<org.slf4j-version>2.0.9</org.slf4j-version>
+		<org.slf4j-version>1.7.36</org.slf4j-version>
 		
-		<mysql-connector-java-version>8.0.33</mysql-connector-java-version>
+		<mysql-connector-java-version>8.0.31</mysql-connector-java-version>
 		<mybatis-version>3.5.13</mybatis-version>
-		<mybatis-spring-version>3.0.2</mybatis-spring-version>
+		<mybatis-spring-version>2.1.0</mybatis-spring-version>
 		
 		<servlet-version>4.0.1</servlet-version>
 		<jsp-version>2.3.3</jsp-version>
 		<jstl-version>1.2</jstl-version>
 		<commons-fileupload-version>1.5</commons-fileupload-version>
-		<commons-dbcp2-version>2.10.0</commons-dbcp2-version>
-		<jackson-databind-version>2.15.3</jackson-databind-version>
-		<json-version>20231013</json-version>
-		<lombok-version>1.18.30</lombok-version>
+		<commons-dbcp2-version>2.9.0</commons-dbcp2-version>
+		<jackson-databind-version>2.13.5</jackson-databind-version>
+		<json-version>20230227</json-version>
+		<lombok-version>1.18.26</lombok-version>
 		
 		<junit-version>4.13.2</junit-version>
 	</properties>
