@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="edu.ssafy.spring.attendance.repository.AttendanceRepository">
+  
+  <insert id="attendanceRegister" parameterType="attendancedto">
+  	insert into attendance(ano, usernumber, issuedate,issue) 
+  	values (#{ano},#{usernumber}, #{issuedate}, #{issue});
+  </insert>
+  
+  <select id="attendanceList"  resultType="attendancedto">
+  	SELECT ano, a.usernumber,name,rclass,rname, issuedate,issue FROM attendance a, userinfo b
+  	WHERE a.usernumber=b.usernumber;
+  </select>
+  
+  <select id="attendanceListPart"  resultType="attendancedto" parameterType="attendancedto">
+  	SELECT ano, a.usernumber,name,rclass,rname, issuedate,issue FROM attendance a, userinfo b
+  	WHERE a.usernumber=b.usernumber AND a.usernumber=#{usernumber};
+  </select>
+  
+  <select id="attendanceView"  resultType="attendancedto">
+  	SELECT ano, a.usernumber,name,rclass,rname, issuedate,issue FROM attendance a, userinfo b
+  	WHERE a.usernumber=b.usernumber AND a.ano=#{ano};
+  </select>
+  
+  <delete id="attendanceDelete">
+  	DELETE FROM attendance WHERE ano=#{ano};
+  </delete>
+  
+</mapper>

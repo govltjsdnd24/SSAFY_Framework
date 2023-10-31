@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="edu.ssafy.spring.member.repository.MemberRepository">
+  
+  <select id="login" parameterType="memberdto" resultType="memberdto">
+  	SELECT id,pw, position,usernumber, name, rname,rclass FROM userinfo
+  	WHERE id= #{id} AND pw= #{pw};
+  </select>
+  
+  <insert id="memberRegister" parameterType="memberdto">
+  	INSERT INTO userinfo(id,pw, position,usernumber, name, rname,rclass) 
+  	VALUES (#{id},#{pw},#{position},#{usernumber},#{name},#{rname},#{rclass})
+  </insert>
+  
+  <update id="memberUpdate" parameterType="memberdto">
+  	UPDATE members 
+  	SET user_name=#{user_name}, user_password=#{user_password},
+  	 email_id=#{email_id}, email_domain=#{email_domain}, join_date=#{join_date}
+  	 WHERE user_id=#{user_id};
+  </update>
+  
+  <delete id="memberDelete" parameterType="memberdto">
+  	DELETE FROM members 
+  	WHERE user_id=#{user_id};
+  </delete>
+  
+  
+</mapper>
